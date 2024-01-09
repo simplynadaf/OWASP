@@ -12,9 +12,9 @@ phases:
       - mvn clean install
 
   post_build:
-  commands:
-    - echo "Running OWASP Dependency-Check..."
-    - mvn dependency-check:check
+    commands:
+      - echo "Running OWASP Dependency-Check..."
+      - mvn dependency-check:check
 
 artifacts:
   files: 
