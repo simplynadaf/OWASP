@@ -3,14 +3,26 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo Logging in to Amazon CodeArtifact... 
-      - cp ./settings.xml /root/.m2/settings.xml #This is must thing for getting packages from codeartifacts 
-      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain owaps --domain-owner 175662053988 --region us-east-1 --query authorizationToken --output text`
+      - echo "Installing dependencies..."
+      - apt-get update && apt-get install -y maven
+
   build:
     commands:
-      - mvn clean install dependency-check:check
-      - mv target/dependency-check-reports reports/
-      - zip -r my-artifact.zip reports/
+      - echo "Building project..."
       - mvn clean install
+
+  post_build:
+  commands:
+    - echo "Running OWASP Dependency-Check..."
+    - mvn dependency-check:check
+
 artifacts:
-  files: my-artifact.zip
+  files: 
+    - target/dependency-check-report.html
+    # Add other artifacts as needed
+
+  # Specify the S3 bucket and object key where you want to store the report
+  s3:
+    bucket: sarvar-devops
+    path: OWASP/
+    # Other S3 configuration options if needed
