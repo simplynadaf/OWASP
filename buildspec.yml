@@ -17,12 +17,13 @@ phases:
       - mvn dependency-check:check
 
 artifacts:
-  files: 
+  files:
     - target/dependency-check-report.html
-    # Add other artifacts as needed
-
-  # Specify the S3 bucket and object key where you want to store the report
+  # Specify the S3 bucket and dynamically include date and time in the object key
   s3:
     bucket: sarvar-devops
-    path: OWASP/
+    path: "OWASP/$(date +'%Y%m%d%H%M%S/')"
     # Other S3 configuration options if needed
+
+reports:
+  OWASPReport: target/dependency-check-report.html
