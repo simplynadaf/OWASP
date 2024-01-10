@@ -5,7 +5,7 @@ phases:
     commands:
       - echo "Setting up CodeArtifact credentials..."
       - export CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain test --domain-owner 175662053988 --region us-east-1 --query authorizationToken --output text)
-      - aws codeartifact login --tool maven --repository artifacts --domain test --authorization-token $CODEARTIFACT_AUTH_TOKEN
+      - aws codeartifact login --repository artifacts --domain test --authorization-token $CODEARTIFACT_AUTH_TOKEN
 
   build:
     commands:
