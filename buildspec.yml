@@ -4,13 +4,14 @@ phases:
   pre_build:
     commands:
       - echo "No Prebuild......"
+
   build:
     commands:
       - mvn clean install dependency-check:check
       - mv target/dependency-check-reports reports/
-      - TIMESTAMP=$(date +'%Y%m%d%H%M%S')
-      - zip -r owasp-report-${TIMESTAMP}.zip reports/
+      - BUILD_NUMBER=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | tr -d '[:alpha:]')
+      - zip -r owasp-report-build-${BUILD_NUMBER}.zip reports/
       - mvn clean install
 
 artifacts:
-  files: owasp-report-*.zip
+  files: owasp-report-build-*.zip
