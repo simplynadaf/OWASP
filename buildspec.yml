@@ -8,7 +8,9 @@ phases:
     commands:
       - mvn clean install dependency-check:check
       - mv target/dependency-check-reports reports/
-      - zip -r my-artifact.zip reports/
+      - TIMESTAMP=$(date +'%Y%m%d%H%M%S')
+      - zip -r owasp-report-${TIMESTAMP}.zip reports/
       - mvn clean install
+
 artifacts:
-  files: my-artifact.zip
+  files: owasp-report-*.zip
