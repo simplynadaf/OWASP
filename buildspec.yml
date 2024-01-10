@@ -26,4 +26,6 @@ artifacts:
     # Other S3 configuration options if needed
 
 reports:
-  OWASPReport: target/dependency-check-report.html
+  OWASPReport:
+    files: target/dependency-check-report.html
+    base-directory: target
