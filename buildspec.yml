@@ -3,29 +3,11 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo "Installing dependencies..."
-      - apt-get update && apt-get install -y maven
-
-  build:
+      - echo "No Prebuild......"
     commands:
-      - echo "Building project..."
+      - mvn clean install dependency-check:check
+      - mv target/dependency-check-reports reports/
+      - zip -r my-artifact.zip reports/
       - mvn clean install
-
-  post_build:
-    commands:
-      - echo "Running OWASP Dependency-Check..."
-      - mvn dependency-check:check
-
 artifacts:
-  files:
-    - target/dependency-check-report.html
-  # Specify the S3 bucket and dynamically include date and time in the object key
-  s3:
-    bucket: sarvar-devops
-    path: "OWASP/$(date +'%Y%m%d%H%M%S/')"
-    # Other S3 configuration options if needed
-
-reports:
-  OWASPReport:
-    files: target/dependency-check-report.html
-    base-directory: target
+  files: my-artifact.zip
