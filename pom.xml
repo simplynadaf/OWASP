@@ -68,6 +68,12 @@
                 <configuration>
                     <!-- Specify the output directory for reports -->
                     <outputDirectory>${project.build.directory}/dependency-check-reports</outputDirectory>
+                    <!-- Other configurations -->
+                    <cveUrlBase>https://nvd.nist.gov/feeds/json/cve/1.1</cveUrlBase>
+                    <cveValidForHours>12</cveValidForHours>
+                    <nvdCveUrl11Modified>https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-modified.json.gz</nvdCveUrl11Modified>
+                    <!-- Specify your NVD API key -->
+                    <nvdApiKey>77c75ee8-56e5-44a0-b9c2-1b7516c65272</nvdApiKey>
                     <!-- Customize other configuration options if needed -->
                 </configuration>
             </plugin>
