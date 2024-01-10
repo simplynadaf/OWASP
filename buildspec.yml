@@ -4,6 +4,7 @@ phases:
   pre_build:
     commands:
       - echo "No Prebuild......"
+  build:
     commands:
       - mvn clean install dependency-check:check
       - mv target/dependency-check-reports reports/
