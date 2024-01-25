@@ -1,4 +1,4 @@
-# 🚀 DevSecOps ⚙️: "Implementing OWASP Scanning on Maven Packages in AWS CodePipeline"💭
+# 🚀 DevSecOps ⚙️: Implementing OWASP Scanning on Maven Dependencies in AWS CodePipeline 💭
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/simplynadaf/devsecops-owasp-maven-aws-codepipeline.svg)](https://github.com/simplynadaf/devsecops-owasp-maven-aws-codepipeline/stargazers)
@@ -6,22 +6,29 @@
 [![GitHub forks](https://img.shields.io/github/forks/simplynadaf/devsecops-owasp-maven-aws-codepipeline.svg)](https://github.com/simplynadaf/devsecops-owasp-maven-aws-codepipeline/network)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/simplynadaf/devsecops-owasp-maven-aws-codepipeline.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20project%20https://github.com/simplynadaf/devsecops-owasp-maven-aws-codepipeline)
 
-We are performing the OWASP Scanning on Maven Central Store Dependency in Amazon CodePipeline
+## Project Overview
 
-## Table of Contents
+The project aims to enhance security in software development through the implementation of OWASP scanning on Maven Central Store Dependencies within the AWS CodePipeline infrastructure.
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+### Key Objectives:
 
-## Features
+1. **Automated OWASP Scanning:** Implementing OWASP-aligned scanners to perform automated vulnerability detection on Maven Central Store Dependencies.
 
-- CodeArtifact in CodePipeline enables secure central dependency storage and OWASP-integrated vulnerability scanning for automated, centralized dependency management.
-- Integrates OWASP-aligned scanners for automated dependency vulnerability detection & Enforces dependency policies to block vulnerable components during deployments.
+2. **Centralized Dependency Management:** Utilizing AWS CodeArtifact in CodePipeline for secure and centralized storage of dependencies.
 
-## Follow me for more 
+3. **Policy Enforcement:** Enforcing strict dependency policies to mitigate security risks by blocking vulnerable components during deployment processes.
 
-Check out my Dev.to profile: [Dev.to](https://dev.to/sarvar_04)
+### Project Highlights:
+
+- **Security-Driven Development:** Prioritizing security by integrating OWASP best practices into the development lifecycle.
+
+- **Centralized Dependency Storage:** Leveraging AWS CodeArtifact for secure and organized storage of Maven Central Store Dependencies.
+
+- **Automated Vulnerability Detection:** Streamlining the identification of vulnerabilities through automated OWASP scanning.
+
+- **Policy-Driven Deployment:** Ensuring the deployment process aligns with defined dependency policies to minimize security risks.
+
+### Follow for Updates:
+
+Stay updated with project developments and security insights by following on [Dev.to](https://dev.to/sarvar_04).
+
