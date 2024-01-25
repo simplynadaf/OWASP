@@ -35,3 +35,7 @@ Follow the detailed tutorial on [Dev.to](https://dev.to/aws-builders/devsecops-i
 ### Follow for Updates:
 
 Stay updated with project developments and security insights by following on [Dev.to](https://dev.to/sarvar_04).
+
+### Connect with the Author
+
+Feel free to connect with me on [LinkedIn](https://in.linkedin.com/in/sarvar04) for discussions, questions, or collaboration opportunities.
