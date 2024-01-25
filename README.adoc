@@ -1,28 +1,27 @@
-Integration on OWASP with Amazon CodePipeline
-Follow me for more on - https://dev.to/sarvar_04
+# 🚀 DevSecOps ⚙️: "Implementing OWASP Scanning on Maven Packages in AWS CodePipeline"💭
 
-Prerequisite -
-  1. Before performing Build configure artifact as S3 so build will store the report on S3.
-  2. If you want to use API Key of NVD to reduce build time use below format in POM.XML file
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/simplynadaf/yourproject.svg)](https://github.com/simplynadaf/yourproject/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/simplynadaf/yourproject.svg)](https://github.com/simplynadaf/yourproject/issues)
+[![GitHub forks](https://img.shields.io/github/forks/simplynadaf/yourproject.svg)](https://github.com/simplynadaf/yourproject/network)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/simplynadaf/yourproject.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20project%20https://github.com/simplynadaf/yourproject)
 
+We are performing the OWASP Scanning on Maven Central Store Dependacy in Amazon CodePipeline
 
-      <build>
-        <plugins>
-            <plugin>
-                <groupId>org.owasp</groupId>
-                <artifactId>dependency-check-maven</artifactId>
-                <version>6.4.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <!-- Specify your NVD API key -->
-                    <nvdApiKey>12bckjhwqiou289643gdasjvmadsgyudaw</nvdApiKey>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+## Features
+
+- CodeArtifact in CodePipeline enables secure central dependency storage and OWASP-integrated vulnerability scanning for automated, centralized dependency management.
+- Integrates OWASP-aligned scanners for automated dependency vulnerability detection & Enforces dependency policies to block vulnerable components during deployments.
+
+## Follow me for more 
+
+Check out my Dev.to profile: [Dev.to](https://dev.to/sarvar_04)
